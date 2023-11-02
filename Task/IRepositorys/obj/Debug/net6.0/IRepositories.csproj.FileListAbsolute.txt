@@ -1,0 +1,15 @@
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\bin\Debug\net6.0\IRepositories.deps.json
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\bin\Debug\net6.0\IRepositories.dll
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\bin\Debug\net6.0\IRepositories.pdb
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\bin\Debug\net6.0\Domain.dll
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\bin\Debug\net6.0\Domain.pdb
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.csproj.AssemblyReference.cache
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.AssemblyInfoInputs.cache
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.AssemblyInfo.cs
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.csproj.CoreCompileInputs.cache
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.csproj.CopyComplete
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.dll
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\refint\IRepositories.dll
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\IRepositories.pdb
+C:\Users\Abdelrhman\source\repos\Task\IRepositorys\obj\Debug\net6.0\ref\IRepositories.dll
