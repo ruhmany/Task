@@ -64,7 +64,7 @@ namespace Task.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPost("Add")]
         public async Task<IActionResult> Add(AddCategoryDTO addCategoryDTO)
         {
             if (!ModelState.IsValid)
@@ -79,7 +79,7 @@ namespace Task.Controllers
             return Ok(result);
         }
 
-        [HttpPut]
+        [HttpPut("Update")]
         public async Task<IActionResult> Update(UpdateCategoryDTO updateCategoryDTO)
         {
             if (!ModelState.IsValid)
@@ -94,7 +94,7 @@ namespace Task.Controllers
             return Ok(result);
         }
 
-        [HttpDelete]
+        [HttpDelete("Remove")]
         public async Task<IActionResult> Remove(int id)
         {
             if (!ModelState.IsValid)
