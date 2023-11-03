@@ -11,7 +11,7 @@ namespace IRepositories.IRepos
 {
     public interface IProductRepo : IBaseRepo<Product>
     {
-        Task<Product> AddProduct(AddProductDTO addProductDTO, Category? category);
+        Task<AddProductResponseDTO> AddProduct(AddProductDTO addProductDTO, Category? category);
         Task<Product> Update(UpdateProductDTO updateProductDTO);
         Task<Product> Remove(int id);
     }

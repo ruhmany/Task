@@ -12,12 +12,12 @@ namespace Task.Controllers
     public class ProductController : ControllerBase
     {
         private readonly TaskFacade _taskFacade;
-        private readonly IBaseRepo<Product> _baserepo;
+        private readonly IProductRepo _productRepo;
 
-        public ProductController(TaskFacade taskFacade, IBaseRepo<Product> baseRepo, IBaseRepo<Product> baserepo)
+        public ProductController(TaskFacade taskFacade, IProductRepo productRepo)
         {
             _taskFacade = taskFacade;
-            _baserepo = baserepo;
+            _productRepo = productRepo;
         }
 
         [HttpGet("GetByID")]
@@ -27,10 +27,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _baserepo.GetAsync(id);
+            var result = await _productRepo.GetAsync(id);
             if (result == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new { Message = "No product with this ID"});
             }
             return Ok(result);
         }
@@ -44,7 +44,7 @@ namespace Task.Controllers
             var result = await _taskFacade.GetProductsByCategoryID(id);
             if (result == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new { Message = "This Category Doesn't have product, or there is no category with this ID" });
             }
             return Ok(result);
         }
@@ -57,10 +57,10 @@ namespace Task.Controllers
                 return BadRequest(ModelState);
             }
             var category = await _taskFacade.getCategoryByName(addProductDTO.CategoryName);
-            var result = await _taskFacade.AddProduct(addProductDTO, category);
+            var result = await _productRepo.AddProduct(addProductDTO, category);
             if (result == null)
             {
-                return BadRequest(result);
+                return BadRequest(new { Message = "Product didn't added"});
             }
             return Ok(result);
         }
@@ -72,10 +72,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _taskFacade.UpdateProduct(updateProductDTO);
+            var result = await _productRepo.Update(updateProductDTO);
             if (result == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new { Message = "Something went wrong while updating this product"});
             }
             return Ok(result);
         }
@@ -86,10 +86,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _taskFacade.RemoveProduct(id);
+            var result = await _productRepo.Remove(id);
             if(result == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new { Message = "Something went wrong, Or now product with this ID"});
             }
             return Ok(result);
         }

@@ -10,3 +10,15 @@ C:\Users\Abdelrhman\source\repos\Task\Domain\obj\Debug\net6.0\Domain.dll
 C:\Users\Abdelrhman\source\repos\Task\Domain\obj\Debug\net6.0\refint\Domain.dll
 C:\Users\Abdelrhman\source\repos\Task\Domain\obj\Debug\net6.0\Domain.pdb
 C:\Users\Abdelrhman\source\repos\Task\Domain\obj\Debug\net6.0\ref\Domain.dll
+E:\GitHub\Task\Task\Task\Domain\bin\Debug\net6.0\Domain.deps.json
+E:\GitHub\Task\Task\Task\Domain\bin\Debug\net6.0\Domain.dll
+E:\GitHub\Task\Task\Task\Domain\bin\Debug\net6.0\Domain.pdb
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\Domain.dll
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\refint\Domain.dll
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\Domain.pdb
+E:\GitHub\Task\Task\Task\Domain\obj\Debug\net6.0\ref\Domain.dll

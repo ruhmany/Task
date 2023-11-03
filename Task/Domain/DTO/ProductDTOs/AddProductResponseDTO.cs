@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Models
+namespace Domain.DTO.ProductDTOs
 {
-    public class Category
+    public class AddProductResponseDTO
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public virtual Collection<Product>? Products { get; set; }        
     }
 }

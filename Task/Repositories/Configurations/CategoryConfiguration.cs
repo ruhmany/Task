@@ -17,7 +17,7 @@ namespace Repositories.Configurations
             builder.HasKey(c => c.ID);
             builder.Property(c => c.ID).ValueGeneratedOnAdd();
             builder.Property(c => c.Name).IsRequired().HasMaxLength(100);
-            builder.HasMany(c=> c.Products).WithOne(p=> p.Categoty).HasForeignKey(p => p.CategoryID);
+            builder.HasMany(c=> c.Products).WithOne(p=> p.Categoty).HasForeignKey(p => p.CategoryID);            
         }
     }
 }

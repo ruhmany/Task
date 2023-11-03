@@ -1,6 +1,7 @@
 ﻿using Domain.DTO.CategoryDTOs;
 using Domain.Models;
 using IRepositories.IRepos;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,13 +13,10 @@ namespace Task.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
-        private readonly TaskFacade _taskFacade;
-        private readonly IBaseRepo<Category> _baserepo;
-
-        public CategoryController(TaskFacade taskFacade, IBaseRepo<Category> baserepo)
+        private readonly ICategoryRepo _categoryRepo;
+        public CategoryController(ICategoryRepo categoryRepo)
         {
-            _taskFacade = taskFacade;
-            _baserepo = baserepo;
+            _categoryRepo = categoryRepo;
         }
 
         [HttpGet("GetAll")]
@@ -27,11 +25,11 @@ namespace Task.Controllers
             if(!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-            var result = await _baserepo.GetAllAsync();
+            }            
+            var result = await _categoryRepo.GetAll();
             if(result == null)
             {
-                return BadRequest(result);
+                return BadRequest(new { Message = "No categories"});
             }
             return Ok(result);
         }
@@ -43,10 +41,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _taskFacade.GetCategoryByID(id);
+            var result = await _categoryRepo.GetByID(id);
             if (result == null)
             {
-                return BadRequest(result);
+                return BadRequest(new { Message = "No product with this ID"});
             }
             return Ok(result);
         }
@@ -58,10 +56,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _taskFacade.GetProductsByCategoryID(id);
+            var result = await _categoryRepo.GetProducts(id);
             if (result == null)
             {
-                return BadRequest(result);
+                return BadRequest(new { Message = "This category doesn't have products"});
             }
             return Ok(result);
         }
@@ -73,10 +71,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _taskFacade.AddCategory(addCategoryDTO);
+            var result = await _categoryRepo.AddCategory(addCategoryDTO);
             if (result == null)
             {
-                return BadRequest(result);
+                return BadRequest(new { Message = "Something went wrong while adding this category"});
             }
             return Ok(result);
         }
@@ -88,10 +86,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _taskFacade.UpdaeCategory(updateCategoryDTO);
+            var result = await _categoryRepo.Update(updateCategoryDTO);
             if (result == null)
             {
-                return BadRequest(result);
+                return BadRequest(new { Message = "Something went wrong while updating this category" });
             }
             return Ok(result);
         }
@@ -103,10 +101,10 @@ namespace Task.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _taskFacade.DeleteCategory(id);
+            var result = await _categoryRepo.Remove(id);
             if (result == null)
             {
-                return BadRequest(result);
+                return BadRequest(new { Message = "Something went wrong while removing this category" });
             }
             return Ok(result);
         }

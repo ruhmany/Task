@@ -19,7 +19,7 @@ namespace Repositories.Repos
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<Product> AddProduct(AddProductDTO addProductDTO, Category? category)
+        public async Task<AddProductResponseDTO> AddProduct(AddProductDTO addProductDTO, Category? category)
         {
             var product = new Product();
             product.Name = addProductDTO.ProductName;
@@ -33,7 +33,8 @@ namespace Repositories.Repos
             product.Categoty = category;
             await _context.Products.AddAsync(product);
             _unitOfWork.CommitChanges();
-            return product;
+            var result = new AddProductResponseDTO { Name = product.Name, ID = product.ID };
+            return result;
         }
 
         public async Task<Product> Remove(int id)
