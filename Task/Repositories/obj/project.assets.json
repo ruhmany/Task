@@ -3083,19 +3083,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP-450\\.nuget\\packages\\": {}
+    "C:\\Users\\Abdelrhman\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub\\Task\\Task\\Task\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "D:\\Task\\Task\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "E:\\GitHub\\Task\\Task\\Task\\Repositories\\Repositories.csproj",
-      "packagesPath": "C:\\Users\\HP-450\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub\\Task\\Task\\Task\\Repositories\\obj\\",
+      "projectPath": "D:\\Task\\Task\\Repositories\\Repositories.csproj",
+      "packagesPath": "C:\\Users\\Abdelrhman\\.nuget\\packages\\",
+      "outputPath": "D:\\Task\\Task\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HP-450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Abdelrhman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3103,17 +3108,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\GitHub\\Task\\Task\\Task\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\GitHub\\Task\\Task\\Task\\Domain\\Domain.csproj"
+            "D:\\Task\\Task\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Task\\Task\\Domain\\Domain.csproj"
             },
-            "E:\\GitHub\\Task\\Task\\Task\\IRepositorys\\IRepositories.csproj": {
-              "projectPath": "E:\\GitHub\\Task\\Task\\Task\\IRepositorys\\IRepositories.csproj"
+            "D:\\Task\\Task\\IRepositorys\\IRepositories.csproj": {
+              "projectPath": "D:\\Task\\Task\\IRepositorys\\IRepositories.csproj"
             }
           }
         }
@@ -3167,7 +3173,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
